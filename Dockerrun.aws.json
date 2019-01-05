@@ -23,14 +23,14 @@
   "containerDefinitions": [
     {
       "name": "php-app",
-      "image": "276563756745.dkr.ecr.eu-west-1.amazonaws.com/paulieh:latest",
+      "image": "276563756745.dkr.ecr.eu-west-1.amazonaws.com/php:latest",
       "essential": true,
       "memoryReservation": 512,
       "mountPoints": [
         {
           "sourceVolume": "application",
           "containerPath": "/var/www/html",
-          "readOnly": false:
+          "readOnly": false
         },
         {
           "sourceVolume": "awseb-logs-php-app",
@@ -45,7 +45,7 @@
     },
     {
       "name": "nginx-proxy",
-      "image": "276563756745.dkr.ecr.eu-west-1.amazonaws.com/sandwich:latest",
+      "image": "276563756745.dkr.ecr.eu-west-1.amazonaws.com/nginix:latest",
       "essential": true,
       "memory": 128,
       "portMappings": [
